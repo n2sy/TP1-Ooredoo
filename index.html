@@ -12,55 +12,72 @@
 </head>
 
 <body>
-    <ion-app>
-        <ion-header>
-            <ion-toolbar color="primary">
-                <ion-title>Gestionnaire des dépenses</ion-title>
-            </ion-toolbar>
-        </ion-header>
-        <ion-content>
-            <ion-grid>
-                <ion-row>
-                    <ion-col size-md="8" offset-md="3">
-                        <ion-card>
-                            <ion-card-header>
-                                <ion-card-title>Nouvelle dépense</ion-card-title>
-                            </ion-card-header>
+<ion-app>
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-title>Gestionnaire des dépenses</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-grid>
+            <ion-row>
+                <ion-col size-md="8" offset-md="3">
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title>Nouvelle dépense</ion-card-title>
+                        </ion-card-header>
 
-                            <ion-card-content>
-                                <ion-item>
-                                    <ion-label position="floating">Intitulé de la dépense</ion-label>
-                                    <ion-input type="text"></ion-input>
-                                </ion-item>
-                                <ion-item>
-                                    <ion-label position="floating">Somme dépensée</ion-label>
-                                    <ion-input type="number"></ion-input>
-                                </ion-item>
+                        <ion-card-content>
+                            <ion-item>
+                                <ion-label position="floating">Intitulé de la dépense</ion-label>
+                                <ion-input type="text" id="depense"></ion-input>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label position="floating">Somme dépensée</ion-label>
+                                <ion-input type="number" id="Somme"></ion-input>
+                            </ion-item>
 
-                                <div class="ion-margin-vertical ion-text-end">
-                                    <ion-button fill="outline" color="danger">
-                                        <ion-icon slot="start" name="close-outline"></ion-icon>
-                                        Effacer
-                                    </ion-button>
-                                    <ion-button fill="outline" color="success">
-                                        <ion-icon slot="end" name="add-outline"></ion-icon>
-                                        Ajouter
-                                    </ion-button>
-                                </div>
-
-
+                            <div class="ion-margin-vertical ion-text-end">
+                                <ion-button fill="outline" color="danger" id="Delete" onclick="RemoveFunction()">
+                                    <ion-icon slot="start" name="close-outline"></ion-icon>
+                                    Effacer
+                                </ion-button>
+                                <ion-button fill="outline" color="success" id="Sum"  onclick="Ajouter()">
+                                    <ion-icon slot="end" name="add-outline"></ion-icon>
+                                    Ajouter
+                                </ion-button>
+                            </div>
 
 
-                            </ion-card-content>
-                        </ion-card>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
+                        </ion-card-content>
 
-        </ion-content>
+                    </ion-card>
 
-    </ion-app>
-    <script src="app.js"></script>
+                        <div id="items">
+                        <ion-label></ion-label>
+                        </div>
+
+                    <ion-item>
+                        <ion-label >Total des dépenses : </ion-label> <ion-label id="counter">0</ion-label>
+                    </ion-item>
+
+                </ion-col>
+
+            </ion-row>
+
+        </ion-grid>
+
+
+
+    </ion-content>
+
+
+
+</ion-app>
+
+
+
+<script src="app.js"></script>
 </body>
 
 </html>
